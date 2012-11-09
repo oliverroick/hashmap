@@ -1,6 +1,6 @@
 /**
  * HashMap
- * @author Ariel Flesler <aflesler@gmail.com>
+ * @author Ariel Flesler <aflesler@gmail.com>, Oliver Roick <https://github.com/oliverroick>
  * @version 0.9.1
  * Date: 9/28/2012
  * Homepage: https://github.com/flesler/hashmap
@@ -27,6 +27,14 @@
 		
 		has:function(key) {
 			return this.hash(key) in this._data;
+		},
+
+		values:function(){
+			var values = [];
+			for (i in this._data) {
+				values.push(this._data[i]);
+			}
+			return values;
 		},
 		
 		remove:function(key) {
