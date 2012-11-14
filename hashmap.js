@@ -31,8 +31,8 @@
 
 		values:function(){
 			var values = [];
-			for (i in this._data) {
-				values.push(this._data[i]);
+			for (var key in this._data) {
+				values.push(this._data[key]);
 			}
 			return values;
 		},
